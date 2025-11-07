@@ -14,23 +14,39 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Etapa de Build
-        run: echo "Compilando o projeto..."
+        run: echo "Compilando o projeto (simulação de build)..."
 
       - name: Etapa de Testes
         run: |
           echo "Executando testes simulados..."
-          # Simulando um teste que falha se encontrar a palavra 'erro'
+          # Simulando falha se a palavra 'erro' existir no README.md
           if grep -q "erro" README.md; then
-            echo "Test failed!"
+            echo "❌ Test failed!"
             exit 1
           else
-            echo "Todos os testes passaram!"
+            echo "✅ Todos os testes passaram!"
           fi
 
-      - name: Relatório Final
+      - name: Relatório de Sucesso
         if: success()
-        run: echo "✅ Build successful!"
-        
+        run: echo "Build e Testes concluídos com sucesso!"
+
       - name: Relatório de Falha
         if: failure()
-        run: echo "❌ Test failed!"
+        run: echo "Build ou Testes falharam!"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: success()
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Simular Deploy em Homologação
+        run: |
+          echo "Iniciando deploy simulado no ambiente de homologação..."
+          mkdir -p staging
+          zip -r staging/app_homologacao.zip .
+          echo "✅ Artefato gerado em staging/app_homologacao.zip"
+
