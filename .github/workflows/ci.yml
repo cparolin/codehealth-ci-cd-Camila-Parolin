@@ -34,3 +34,4 @@ jobs:
       - name: Relatório de Falha
         if: failure()
         run: echo "❌ Test failed!"
+
