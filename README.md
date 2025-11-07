@@ -59,7 +59,7 @@ O fluxo de trabalho segue o padrão:
 
 Abaixo está um exemplo da execução automática do pipeline no GitHub Actions:
 
-![Execução do Workflow](screenshot_workflow.png)
+<img width="1015" height="720" alt="Captura de Tela 2025-11-07 às 20 36 49" src="https://github.com/user-attachments/assets/3fc14a10-5367-44fe-9502-6458c70ff954" />
 
 
 
