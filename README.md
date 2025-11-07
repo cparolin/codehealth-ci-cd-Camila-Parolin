@@ -2,4 +2,4 @@
 Atividade Prática de Introdução a Engenharia de Software
 
 ## Projeto HTML
-O projeto anexado é uma tabela nutricional desenvolvida na aula de fundamentos de web
+Os projetos anexados são atividades desenvolvidas durante aulas do primeiro bimestre da matéria de fundamentos de web com intuítos diferentes e complexidade baixa
