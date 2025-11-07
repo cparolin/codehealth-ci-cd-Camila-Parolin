@@ -48,4 +48,19 @@ Por isso:
 - O arquivo foi adicionado ao `.gitignore`, garantindo que o Git o **ignore automaticamente**.  
 - Em ambientes reais, **credenciais e segredos devem ser armazenados de forma segura**, como em **GitHub Secrets**, **variáveis de ambiente do servidor** ou **serviços de gerenciamento de segredos** (ex.: *AWS Secrets Manager*).
 
+## Estrutura de Branches
+
+- **main**: branch principal, usada para armazenar o código estável e pronto para produção.  
+- **develop**: branch de desenvolvimento, onde as alterações são testadas e o pipeline CI é executado automaticamente.  
+
+O fluxo de trabalho segue o padrão:
+
+## 📸 Execução do Workflow
+
+Abaixo está um exemplo da execução automática do pipeline no GitHub Actions:
+
+![Execução do Workflow](screenshot_workflow.png)
+
+
+
 
