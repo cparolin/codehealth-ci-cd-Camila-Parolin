@@ -39,3 +39,13 @@ Testes (simulados)
 Se falhar → mostra "Test failed"
 Se passar → gera staging/app_homologacao.zip
 
+## Motivo para não versionar credenciais
+
+O arquivo `config.env` contém **variáveis de ambiente simuladas** (como usuários, senhas e chaves de API).  
+Essas informações **não devem ser versionadas** nem enviadas ao repositório, pois podem expor dados sensíveis do sistema.
+
+Por isso:  
+- O arquivo foi adicionado ao `.gitignore`, garantindo que o Git o **ignore automaticamente**.  
+- Em ambientes reais, **credenciais e segredos devem ser armazenados de forma segura**, como em **GitHub Secrets**, **variáveis de ambiente do servidor** ou **serviços de gerenciamento de segredos** (ex.: *AWS Secrets Manager*).
+
+
